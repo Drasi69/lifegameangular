@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lifegameangular';
+  isRunning = false;
+
+  setIsRunning(value: boolean) {
+    this.isRunning = value;
+  }
 }
