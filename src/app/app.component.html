@@ -1,4 +1,7 @@
+<app-top-bar (run)="setIsRunning($event)"></app-top-bar>
 <div class="game">
-  <app-board [isRunning]="isRunning"></app-board>
-  <app-control-panel (run)="setIsRunning($event)"></app-control-panel>
+  <app-board [isRunning]="isRunning"
+  (col)="setColumns($event)" (row)="setRows($event)"
+  (round)="setRound($event)" (status)="setStatus($event)"></app-board>
+  <app-control-panel [columns]="columns" [rows]="rows" [status]="status" [round]="round"></app-control-panel>
 </div>

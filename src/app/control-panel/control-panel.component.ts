@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-control-panel',
@@ -6,14 +6,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./control-panel.component.css']
 })
 export class ControlPanelComponent {
-  @Output() run = new EventEmitter<boolean>();
-
-  start() {
-    this.run.emit(true);
-  }
-
-  stop() {
-    this.run.emit(false);
-  }
+  @Input() round = 0;
+  @Input() columns = 0;
+  @Input() rows = 0;
+  @Input() status = "Stopped";
 
 }
